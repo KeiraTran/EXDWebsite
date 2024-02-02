@@ -74,6 +74,7 @@
 
 .navbar_btn {
   display: flex;
+  
   justify-content: center;
   align-items: center;
   padding: 0 1rem;
@@ -197,8 +198,13 @@
 
 /* Hero Section */
 .hero {
-  background: #191a19;
-  background: linear-gradient(to top, #1f1e1e, #000000);
+  background-image: url('/images/ragnarok2.0.png'); 
+  background-position: center center;
+  background-repeat: repeat;
+  background-color: #1f1e1e;
+  overflow:hidden;
+  
+  /*background-color: linear-gradient(to top, #1f1e1e, #000000);*/
   padding: 100px 0; /* this changes the size of the header block*/
 }
 
@@ -217,7 +223,7 @@
 .hero_heading {
   font-size: 100px;
   margin-bottom: 24px;
-  color: #c00726; /* fallback for old browsers */
+  color: #ffffff; /* fallback for old browsers */
 
 
 }
@@ -244,7 +250,7 @@
 .hero_description {
   font-size: 60px;
   background: #cf1f3c; /* fallback for old browsers */
-  background: linear-gradient(to top, #ff083d 0%, #ed3a1a 100%);
+  background: linear-gradient(to top, #b20a2e 0%, #ed3a1a 80%);
   background: -webkit-linear-gradient(
     to right,
     #f3134b,
@@ -263,9 +269,7 @@
   -moz-text-fill-color: transparent;
 }
 
-.highlight {
-  border-bottom: 4px solid rgb(132, 0, 255);
-}
+
 
 @media screen and (max-width: 768px) {
   .hero_heading {
@@ -296,7 +300,7 @@
 }
 
 .main_container {
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   justify-content: center;
@@ -317,7 +321,7 @@
 .main_content h1 {
   font-size: 60px;
   background-color: #fe3b6f;
-  background-image: linear-gradient(to top, #ff083d 0%, #ed3a1a 100%);
+  background-image: linear-gradient(to top, #c80b34 0%, #ed3a1a 80%);
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -348,6 +352,7 @@
 }
 
 .main_content p {
+  font-family: 'Calibri', sans-serif;
   margin-top: 1rem;
   font-size: 1.4rem;
   font-weight: 100;
@@ -397,10 +402,13 @@
 
 .main_img--container {
   text-align: center;
+  display:flex;
+  justify-content: center;
+  
 }
 
 .main_img--card {
-  margin: 10px;
+  margin: 20px;
   height: 500px;
   width: 500px;
   border-radius: 4px;
@@ -421,6 +429,8 @@
 }
 
 #card-2 {
+  height: 300px;
+  width: 300px;
   background: #ff512f;
   background: -webkit-linear-gradient(to right, #dd2476, #ff512f);
   background: linear-gradient(to right, #dd2476, #ff512f);
@@ -497,18 +507,18 @@
   }
 }
 
-/* Services Section */
-.services {
+/* gallery Section */
+.gallery {
   background: #131313;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
-  padding: 10rem 0;
+  padding: 50px 0
 }
 
-.services h1 {
+.gallery h1 {
   background-color: #ff8177;
   background-image: linear-gradient(to right, #ff0844 0%, #f7673c 100%);
   background-size: 100%;
@@ -520,13 +530,13 @@
   font-size: 2.5rem;
 }
 
-.services_wrapper {
+.gallery_wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
 }
 
-.services_card {
+.gallery_card {
   margin: 10px;
   height: 425px;
   width: 300px;
@@ -539,7 +549,7 @@
   transition: 0.3s ease-in;
 }
 
-.services_card:nth-child(2) {
+.gallery_card:nth-child(2) {
   background: #1fa2ff; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
@@ -555,7 +565,7 @@
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.services_card:nth-child(3) {
+.gallery_card:nth-child(3) {
   background-image: linear-gradient(
     -225deg,
     #231557 0%,
@@ -565,23 +575,23 @@
   );
 }
 
-.services_card h2 {
+.gallery_card h2 {
   text-align: center;
 }
 
-.services_card p {
+.gallery_card p {
   text-align: center;
   margin-top: 24px;
   font-size: 20px;
 }
 
-.services_btn {
+.gallery_btn {
   display: flex;
   justify-content: center;
   margin-top: 16px;
 }
 
-.services_card button {
+.gallery_card button {
   color: #fff;
   padding: 14px 24px;
   border: none;
@@ -591,24 +601,24 @@
   font-size: 1rem;
 }
 
-.services_card button:hover {
+.gallery_card button:hover {
   cursor: pointer;
 }
 
-.services_card:hover {
+.gallery_card:hover {
   transform: scale(1.075);
   transition: 0.3s ease-in;
   cursor: pointer;
 }
 
 @media screen and (max-width: 1300px) {
-  .services_wrapper {
+  .gallery_wrapper {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .services_wrapper {
+  .gallery_wrapper {
     grid-template-columns: 1fr;
   }
 }
